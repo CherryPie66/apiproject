@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yupi.springbootinit.mapper.InterfaceInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.yupi.apicommon.model.entity.InterfaceInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="interface_name" column="interface_name" jdbcType="VARCHAR"/>
+            <result property="url" column="url" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="requestParams" column="requestParams" jdbcType="VARCHAR"/>
+            <result property="type" column="type" jdbcType="VARCHAR"/>
+            <result property="request_head" column="request_head" jdbcType="VARCHAR"/>
+            <result property="reponse_head" column="reponse_head" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="userId" column="userId" jdbcType="BIGINT"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="is_deleted" column="is_deleted" jdbcType="TINYINT"/>
+            <result property="create_time" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="update_time" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,interface_name,url,
+        description,requestParams,type,
+        request_head,reponse_head,status,
+        userId,username,is_deleted,
+        create_time,update_time
+    </sql>
+</mapper>
